@@ -3,25 +3,24 @@
 
 <head>
     <meta charset="utf-8">
-     <meta name="description" content="Game Collectors App">
+    <meta name="description" content="Game Collectors App">
     <meta name="keywords" content="HTML, CSS, JavaScript, Python, Flask, Mongodb">
     <meta name="author" content="Nuno Nunes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>1UPLoot</title>
-    <!--Import Bulma CSS-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
-    <!--Import Font Awesome-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
-    <!--Import Materialize Icons-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!--Import CSS style-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!--Import Materialize Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import font-awesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
     <!--Import logo font-->
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
     <!--Import default font-->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <!--Favicon-->
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
 </head>
@@ -30,66 +29,70 @@
 
 
     <!-- Nav bar -->
-    <nav class="navbar is-Dark" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="#"><span>One up loot</span> </a>
 
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item">
-                    Home
-                </a>
-                <a class="navbar-item">
-                    About
-                </a>
-                <a class="navbar-item">
-                    Features
-                </a>
-                <a class="navbar-item">
-                   
-                    <span>Login<i class="fa fa-user-circle" aria-hidden="true"></i></span>
-                </a>
-                <a class="navbar-item">
-                   <span>Register<i class="fa fa-pen" aria-hidden="true"></i></span>
-                </a>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">1UPLoot</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
             </div>
-        </div>
-    </nav>
-
+        </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#"><i class="nav-icon fa fa-arrow-circle-o-up" aria-hidden="true"></i> Login</a></li>
+        <li><a href="#"><i class="nav-icon fa fa-arrow-circle-o-up" aria-hidden="true"></i> Register</a></li>
+    </ul>
     <!-- Main Div-->
 
-    <div class="main-div">
 
-        <img src="{{ url_for('static', filename='images/main-section-image.png') }}" alt="" srcset="">
+    <div class="parallax-container">
+        <div class="parallax"><img src="{{ url_for('static', filename='images/main-section-image.png') }}"></div>
+    </div>
+    <div class="section white">
+        <div class="row container">
+            <h2 class="header">Parallax</h2>
+            <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image
+                in
+                this case, is moved at a different speed than the foreground content while scrolling.</p>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="{{ url_for('static', filename='images/main-section-image2.png') }}"></div>
     </div>
 
-    <footer class="footer">
-        <div class="social-icons content has-text-centered">
 
-            <a href="https://www.facebook.com" aria-label="Facebook" rel="noopener" target="_blank"><i
-                    class="fab fa-facebook-square"></i></a>
-            <a href="https://www.twitter.com" aria-label="Twitter" rel="noopener" target="_blank"><i
-                    class="fab fa-twitter-square"></i></a>
-            <a href="https://www.instagram.com" aria-label="Instagram" rel="noopener" target="_blank"><i
-                    class="fab fa-instagram-square"></i></a>
-            <div class="designed-by">
-                Designed by Nuno Nunes
+    <footer class="page-footer" style="position:fixed;bottom:0;left:0;width:100%;">
+        <div class="footer-copyright">
+            <div class="social-icons container center">
+                <a href="https://www.facebook.com" aria-label="Facebook" rel="noopener" target="_blank"><i
+                        class="fab fa-facebook-square"></i></a>
+                <a href="https://www.twitter.com" aria-label="Twitter" rel="noopener" target="_blank"><i
+                        class="fab fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com" aria-label="Instagram" rel="noopener" target="_blank"><i
+                        class="fab fa-instagram-square"></i></a>
+                <div class="designed-by">
+                    Designed by Nuno Nunes
+                </div>
             </div>
         </div>
-
     </footer>
 
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Materialize Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Materialize Compiled and minified JavaScript -->
     <script src="{{url_for('static', filename='js/main.js')}}"></script>
 
 </body>

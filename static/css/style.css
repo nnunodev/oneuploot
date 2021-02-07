@@ -1,27 +1,37 @@
 /* Smooth scrolling */
+
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: 'VT323', monospace;
+}
 
+/* ******** navbar settings *********  */
 
+/* navbar font icons margin register/login*/
 
+.nav-icon {
+    margin-right: 10px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+nav ul a {
+    font-size: 20px;
+}
+nav{
+    background-color: black;
+}
+nav .brand-logo {
+    color: black;
+    font-family: 'Jomhuria', cursive;
+    font-size: 40px;
+    margin-left: 20px;
+}
 
 /* Footer settings */
 
-.footer{
+.footer {
     background-color: black!important;
     color: white;
 }
@@ -29,6 +39,7 @@ html {
 .social-icons {
     font-size: 20px;
 }
+
 .fab {
     color: #D3D3D3;
 }

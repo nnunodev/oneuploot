@@ -3,12 +3,27 @@
 
 <head>
     <meta charset="utf-8">
+     <meta name="description" content="Game Collectors App">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Python, Flask, Mongodb">
+    <meta name="author" content="Nuno Nunes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>1UPLoot</title>
+    <!--Import Bulma CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+    <!--Import Font Awesome-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <!--Import Materialize Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import CSS style-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!--Import logo font-->
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <!--Import default font-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap"
+        rel="stylesheet">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
 </head>
 
 <body>
@@ -32,20 +47,29 @@
                 <a class="navbar-item">
                     Home
                 </a>
-
                 <a class="navbar-item">
-                    Documentation
+                    About
+                </a>
+                <a class="navbar-item">
+                    Features
+                </a>
+                <a class="navbar-item">
+                   
+                    <span>Login<i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                </a>
+                <a class="navbar-item">
+                   <span>Register<i class="fa fa-pen" aria-hidden="true"></i></span>
                 </a>
             </div>
         </div>
     </nav>
 
-<!-- Main Div-->
+    <!-- Main Div-->
 
-<div class="main-div">
+    <div class="main-div">
 
-    <img src="{{ url_for('static', filename='images/main-section-image.png') }}" alt="" srcset="">
-</div>
+        <img src="{{ url_for('static', filename='images/main-section-image.png') }}" alt="" srcset="">
+    </div>
 
     <footer class="footer">
         <div class="social-icons content has-text-centered">

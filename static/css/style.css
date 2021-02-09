@@ -31,11 +31,13 @@ nav .brand-logo {
 
 /* Footer settings */
 
-.footer {
+.page-footer {
     background-color: black!important;
     color: white;
 }
-
+.footer-copyright{
+    background-color: black!important;
+}
 .social-icons {
     font-size: 20px;
 }
@@ -45,5 +47,5 @@ nav .brand-logo {
 }
 
 .designed-by {
-    font-size: 10px;
+    font-size: 12px;
 }

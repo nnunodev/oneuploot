@@ -1,0 +1,55 @@
+{% extends 'base.html' %} {% block content %}
+
+<!-- Main Div for parallax-->
+
+
+<div class="parallax-container">
+    <div class="parallax"><img class="responsive-img"
+            src="{{ url_for('static', filename='images/main-section-image.png') }}"></div>
+</div>
+<div class="section white">
+    <div class="row container">
+        <h4 class="header">1UP Loot</h4>
+        <p class="grey-text text-darken-3 lighten-3">1Up Loot is a game collection manager app to help you organize
+            your gaming collection.
+            It supports all major platforms and it's easy to use!</p>
+    </div>
+</div>
+<div class="parallax-container">
+    <div class="parallax"><img class="responsive-img"
+            src="{{ url_for('static', filename='images/main-section-image2.png') }}"></div>
+</div>
+<!--Features Title-->
+<div class="col s12 m12 l12 center">
+    <h2 class="features-title">Features</h2>
+</div>
+<!--All feature icons-->
+<div class="container">
+    <div id="features" class="features">
+        <div class="col s12 m4 l4">
+            <i class="material-icons icon">edit</i>
+            <p class="icon-desc">Add/Edit Games</p>
+        </div>
+        <div class="col s12 m4 l4">
+            <i class="material-icons icon">data_usage</i>
+            <p class="icon-desc">All data in one place</p>
+        </div>
+        <div class="col s12 m4 l4">
+            <i class="material-icons icon">mobile_friendly</i>
+            <p class="icon-desc">Mobile Friendly</p>
+        </div>
+        <div class="col s12 m4 l4">
+            <i class="material-icons icon">games</i>
+            <p class="icon-desc">Major platforms supported</p>
+        </div>
+        <div class="col s12 m4 l4">
+            <i class="material-icons icon">system_update</i>
+            <p class="icon-desc">Constant Updates</p>
+        </div>
+        <div class="col s12 m4 l4">
+            <i class="material-icons icon">videogame_asset</i>
+            <p class="icon-desc">Retro Games Support</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

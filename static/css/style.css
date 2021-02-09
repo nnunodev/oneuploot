@@ -17,17 +17,42 @@ body {
 }
 
 nav ul a {
-    font-size: 20px;
+    font-size: 15px;
 }
 nav{
     background-color: black;
 }
 nav .brand-logo {
-    color: black;
-    font-family: 'Jomhuria', cursive;
-    font-size: 40px;
+
     margin-left: 20px;
 }
+
+
+/* Features - Icons */
+.icon {
+    font-size: 35px!important;
+    color: #ED6E07;
+}
+
+/* feature description style*/
+.icon-desc {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 100px;
+}
+
+/* Side nav . mobile view */
+.sidenav {
+    background-color: #0D0D0D;
+    width: 150px;
+}
+
+/* Text color in sidenav */
+.sidenav li>a {
+    color: white;
+}
+
+
 
 /* Footer settings */
 

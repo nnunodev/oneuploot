@@ -32,7 +32,8 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">1UPLoot</a>
+                <a href="{{url_for('index')}}" class="brand-logo"><img alt="logo" src="../static/images/logo.png" width="20"
+                    height="20" alt=""> 
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#">Home</a></li>
@@ -47,7 +48,7 @@
 
     <!--Mobile side nav-->
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Features</a></li>
         <li><a href="#">Login</a></li>
@@ -78,7 +79,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Materialize Compiled and minified JavaScript -->
     <script src="{{url_for('static', filename='js/main.js')}}"></script>
-
+    {% block content %}{% endblock %}
 </body>
 
 </html>

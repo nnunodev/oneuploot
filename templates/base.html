@@ -32,16 +32,16 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="{{url_for('index')}}" class="brand-logo"><img alt="logo" src="../static/images/logo.png" width="20"
-                    height="20" alt=""> 
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Register</a></li>
-                </ul>
+                <a href="{{url_for('index')}}" class="brand-logo"><img alt="logo" src="../static/images/logo.png"
+                        width="20" height="20" alt="">
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="{{url_for('login')}}">Login</a></li>
+                        <li><a href="{{url_for('signup')}}">Sign Up</a></li>
+                    </ul>
             </div>
         </nav>
     </div>
@@ -51,8 +51,8 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Features</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a href="#"> Register</a></li>
+        <li><a href="{{url_for('login')}}">Login</a></li>
+        <li><a href="{{url_for('signup')}}">Sign Up</a></li>
     </ul>
 
     <!-- Footer -->

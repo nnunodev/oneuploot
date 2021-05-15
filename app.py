@@ -10,20 +10,22 @@ if path.exists("env.py"):
 
 app = Flask(__name__)
 
-#DB settings
+# DB settings
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
-#route for homepage
+# route for homepage
+
+
 @app.route('/')
 def index():
-
     return render_template('index.html')
 
-#route to login page
+# route to login page
+
 
 @app.route('/login')
-def  login():
+def login():
     return render_template('login.html')

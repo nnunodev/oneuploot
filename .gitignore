@@ -3,4 +3,4 @@ basecopy.html
 vscode
 notes.txt
 .gitignore
-env.py
+.env

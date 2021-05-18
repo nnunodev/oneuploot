@@ -24,7 +24,11 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    if 'username' in session:
+        user = session['username']
+        return render_template('index.html', user=user)
+    else:
+        return render_template('index.html')
 
 # route to user to login
 
@@ -80,5 +84,9 @@ def signup():
     else:
         return render_template('signup.html')
 
+#route for logout users
 
-
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('index'))

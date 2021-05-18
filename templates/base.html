@@ -40,7 +40,7 @@
                         <li><a href="{{url_for('index')}}">Home</a></li>
                         <li><a href="#"><i class="material-icons left">group</i>Hi {{session['username'].title()}}!</a></li>
                         <li><a href="#">Loot</a></li>
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="{{url_for('logout')}}">Logout</a></li>
                     </ul>
             </div>
         </nav>
@@ -51,7 +51,7 @@
         <li><a href="{{url_for('index')}}">Home</a></li>
         <li><a href="#">Hi {{session['username'].title()}}!</a></li>
         <li><a href="#">Loot</a></li>
-        <li><a href="#">Logout</a></li>      
+        <li><a href="{{url_for('logout')}}">Logout</a></li>
     </ul>
     {% else %}
     <!--If not logged in display the following Nav bar-->

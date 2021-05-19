@@ -90,3 +90,12 @@ def signup():
 def logout():
     session.pop('username', None)
     return redirect(url_for('index'))
+
+
+#route for user profile
+
+@app.route('/<username>')
+def profile(username):
+    if 'username' in session:
+        user = session['username']
+        return render_template('profile.html', games=mongo.db.games.find(), genres=mongo.db.genres.find(), platforms=mongo.db.platforms.find(), user=user)

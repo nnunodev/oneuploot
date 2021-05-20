@@ -94,7 +94,7 @@ def logout():
 def profile(username):
     if 'username' in session:
         user = session['username']
-        return render_template('profile.html', games=mongo.db.games, genres=mongo.db.genres.find(), platforms=mongo.db.platforms.find(), user=user)
+        return render_template('profile.html', games=mongo.db.games.find(), genres=mongo.db.genres.find(), platforms=mongo.db.platforms.find(), user=user)
 
 
 # search route for platform

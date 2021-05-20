@@ -38,8 +38,9 @@
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="{{url_for('index')}}">Home</a></li>
-                        <li><a href="#"><i class="material-icons left">group</i>Hi {{session['username'].title()}}!</a></li>
-                        <li><a href="#">Loot</a></li>
+                        <li><a href="#"><i class="material-icons left">group</i>Hi {{session['username'].title()}}!</a>
+                        </li>
+                        <li><a href="{{url_for('profile', username=user)}}">Loot</a></li>
                         <li><a href="{{url_for('logout')}}">Logout</a></li>
                     </ul>
             </div>
@@ -58,15 +59,16 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="{{url_for('index')}}" class="brand-logo"><img alt="logo" src="../static/images/logo.png" width="30"
-                        height="30" alt=""> Loot
+                <a href="{{url_for('index')}}" class="brand-logo"><img alt="logo" src="../static/images/logo.png"
+                        width="30" height="30" alt=""> Loot
                 </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{url_for('index')}}">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#features">Features</a></li>
-                    <li><a href="{{url_for('login_page')}}">Login<i class="material-icons left">account_circle</i></a></li>
+                    <li><a href="{{url_for('login_page')}}">Login<i class="material-icons left">account_circle</i></a>
+                    </li>
                     <li><a href="{{url_for('signup')}}">Register<i class="material-icons left">create</i></a></li>
                 </ul>
             </div>
@@ -83,8 +85,8 @@
         <li><a href="{{url_for('signup')}}">Register</a></li>
     </ul>
 
-    
-  {% endif %}
+
+    {% endif %}
 
     <!-- Footer -->
     <footer class="page-footer" style="position:fixed;bottom:0;left:0;width:100%;">

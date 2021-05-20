@@ -1,0 +1,108 @@
+{% extends 'base.html' %} {% block content %}
+<!--Title-->
+<div class="main-container-games">
+    <div class="row">
+        <div class="col s12 m12 l12 center title-games">
+            <p class="games-title">Add Game</p>
+        </div>
+    </div>
+    <!--Main container-->
+    <div class="container add-edit-game-container">
+        <div class="row">
+
+            <!--Add Games form-->
+            <form id="form-addedit" class="form-addedit" action="{{ url_for('insert_game') }}" method="POST"
+                class="col s12">
+                <div class="row">
+
+                    <!--Game Name-->
+                    <div class="input-field col s12 m4 l4">
+                        <i class="material-icons prefix">videogame_asset</i>
+                        <input placeholder="Game Name" id="game_name" name="game_name" type="text" required>
+                        <label for="icon_prefix">Game Name</label>
+                    </div>
+                    <!--Game Image-->
+                    <div class="input-field col s12 m4 l4">
+                        <i class="material-icons prefix">image</i>
+                        <input id="game_image" name="game_image" type="url" class="validate"
+                            placeholder="https://tinyurl.com/y8rey5pg" required>
+                        <label for="icon_prefix">Image Url(200x200)</label>
+                    </div>
+                    <!--Pickup date-->
+                    <div class="input-field col s12 m4 l4">
+                        <i class="material-icons prefix">today</i>
+                        <input placeholder="Pickup Date" id="pickup_date" name="pickup_date" type="text"
+                            class="datepicker validate" required>
+                        <label for="icon_prefix">Pickup Date</label>
+                    </div>
+                    <!--Platform name-->
+                    <div class="input-field col s12 m4 l4">
+                        <i class="material-icons prefix">gamepad</i>
+                        <select class="validate" id="platform_name" name="platform_name" required>
+                            <option value="" disabled selected>Platform</option>
+                            <!--show all available platforms from DB-->
+                            {% for plat in platforms %}
+                            <option value="{{plat.platform_name}}" required>{{plat.platform_name}}</option>
+                            {%endfor%}
+                        </select>
+                        <label>Platform</label>
+                    </div>
+                    <!--Genre name-->
+                    <div class="input-field col s12 m4 l4">
+                        <i class="material-icons prefix">movie</i>
+                        <select class="validate" id="genre_name" name="genre_name" required>
+                            <option value="" disabled selected>Genre</option>
+                            <!--Show all available game genres in db-->
+                            {% for genre in genres %}
+                            <option value="{{genre.genre_name}}">{{genre.genre_name}}</option>
+                            {%endfor%}
+                        </select>
+                        <label>Genre</label>
+                    </div>
+                    <!--Game Condition-->
+                    <div class="input-field col s12 m4 l4">
+                        <i class="material-icons prefix">autorenew</i>
+                        <select class="validate" id="game_condition" name="game_condition">
+                            <option value="" disabled selected>Game Condition</option>
+                            <option value="New">New</option>
+                            <option value="Used">Used</option>
+                            <option value="Mint">Mint</option>
+                        </select>
+                        <label>Game Condition</label>
+                    </div>
+                    <!--Game store-->
+                    <div class="input-field col s12 m4 l4">
+                        <i class="material-icons prefix">store</i>
+                        <input placeholder="Game Store" id="game_store" name="game_store" type="text" class="validate">
+                        <label for="game_store">Game Store</label>
+                    </div>
+                    <!--Purchased Price-->
+                    <div class="input-field col s12 m4 l4">
+                        <i class="material-icons prefix">attach_money</i>
+                        <input placeholder="Purchased Price" id="game_price" name="game_price" type="number"
+                            class="validate">
+                        <label for="game_price">Purchased Price</label>
+                    </div>
+                    <!--Current Game Value-->
+                    <div class="input-field col s12 m4 l4">
+                        <i class="material-icons prefix">monetization_on</i>
+                        <input placeholder="Current Value" id="game_value" name="game_value" type="number" min="1"
+                            step="any" class="validate">
+                        <label for="game_value">Game Value</label>
+                    </div>
+                    <!--Save button and insert into db-->
+                    <div class="row">
+                        <div class="input-field col s12 m12 l12 center">
+                            <button id="save-button" class="btn waves-effect waves-orange green" type="submit"
+                                name="action">Save
+                                <i class="material-icons right">save</i>
+                            </button>
+                        </div>
+
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

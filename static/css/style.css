@@ -1,83 +1,465 @@
 /* Smooth scrolling */
-
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
+/* Label size for input */
+label {
+  font-size: 20px;
+}
+
+/* Default font and weight for the page */
 body {
-    font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
+  font-weight: 300;
 }
 
-/* ******** navbar settings *********  */
-
-/* navbar font icons margin register/login*/
-
-.nav-icon {
-    margin-right: 10px;
+/* link color text */
+a {
+  color: black;
 }
 
-nav ul a {
-    font-size: 15px;
-}
+/*   
+ Index Page styling   
+*/
 
+/* navbar style */
 nav {
-    background-color: black;
+  background-color: #0d0d0d;
 }
 
+/* navbar font size */
+nav ul a {
+  font-size: 18px;
+}
+
+/* navbar hover color */
+nav ul a:hover {
+  background-color: #d6632e;
+}
+
+/* navbar logo settings */
 nav .brand-logo {
-    margin-left: 20px;
-}
-
-/* Features - Icons */
-
-.icon {
-    font-size: 35px!important;
-    color: #ED6E07;
-}
-
-/* feature description style*/
-
-.icon-desc {
-    font-size: 14px;
-    color: black;
-    margin-bottom: 100px;
+  font-size: 35px;
+  padding-left: 25px;
+  padding-right: 10px;
+  font-family: "Covered By Your Grace", cursive;
 }
 
 /* Side nav . mobile view */
 
 .sidenav {
-    background-color: #0D0D0D;
-    width: 150px;
+  background-color: #0d0d0d;
+  width: 150px;
 }
 
 /* Text color in sidenav */
 
-.sidenav li>a {
-    color: white;
+.sidenav li > a {
+  color: white;
 }
 
-/* Footer settings */
+/* index main container */
+.main-container {
+  background-color: white;
+  color: black;
+  font-size: 50px;
+}
 
+/* Bold title */
+.title {
+  font-weight: 700;
+}
+
+/* app description text */
+.title-description {
+  font-size: 28px;
+  font-weight: 100;
+  color: #8c8c8c;
+}
+
+/* Sign up button properties */
+#btn-signup {
+  margin-bottom: 47px;
+  font-size: 20px;
+  z-index: 0;
+}
+
+/* feature title */
+.features-title {
+  margin-bottom: 80px;
+  font-weight: 700;
+}
+
+/* Features - Icons */
+
+.icon {
+  font-size: 35px !important;
+  color: #ed6e07;
+}
+
+/* feature description style*/
+
+.icon-desc {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 100px;
+}
+
+/*
+    Game/Loot Page
+*/
+
+/*Game main container*/
+.main-container-games {
+  background-color: white;
+  color: black;
+}
+
+/*input label color*/
+.input-field > label {
+  color: black;
+}
+
+/*text size for the select option*/
+.select-wrapper + label {
+  font-size: 15px;
+}
+
+/* Games title style */
+.games-title {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+/* Search button row padding*/
+.search-bar {
+  padding-bottom: 50px;
+}
+
+/* Add games button z-index to not overlap with materialize footer */
+.btn-large {
+  z-index: 0;
+}
+
+/* center button search Genre*/
+.btn-genre {
+  margin-right: 10px;
+}
+
+/* Search buttons style*/
+#search-btn {
+  color: black;
+  margin-right: 50px;
+  z-index: 0;
+}
+
+/* Dropdown window size list for platforms */
+#dropdown1 {
+  min-width: 140px;
+}
+
+/* Dropdown window size list for Retro games */
+#dropdown2 {
+  min-width: 170px;
+}
+
+/* Dropdown window size list for genre games */
+#dropdown3 {
+  min-width: 120px;
+}
+
+/* Change default color from materialize to black on dropdown*/
+.dropdown-content li > a,
+.dropdown-content li > span {
+  color: black;
+}
+
+/* a bit rounded image for cover image*/
+.game-cover {
+  border-radius: 3%;
+}
+
+/* 
+    Hover effect for games list
+*/
+
+/* border effect */
+.border img {
+  transition: 0.5s ease;
+}
+
+/* add box shadow on hover */
+.border img:hover {
+  box-shadow: 0 0 0 3px #262222;
+  transition: 0.5s ease;
+}
+
+/* Edit and Ok buttons style in modal*/
+#ok-btn {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+#edit-btn-game {
+  font-weight: bold;
+}
+
+/* 
+     Add Games Page 
+*/
+
+/*input forms positioning */
+form.col > div:nth-child(1) {
+  padding-bottom: 19px;
+  padding-top: 20px;
+}
+
+/* Form label colors */
+
+/* label color */
+.input-field label {
+  color: black;
+}
+
+/* label focus color for text and number url types*/
+.input-field input[type="text"]:focus + label {
+  color: black !important;
+}
+
+.input-field input[type="number"]:focus + label {
+  color: black !important;
+}
+
+.input-field input[type="url"]:focus + label {
+  color: black !important;
+}
+
+/* label underline focus color for text and number and url types */
+.input-field input[type="text"]:focus {
+  border-bottom: 1px solid #00c95e !important;
+  box-shadow: 0 1px 0 0 #00c95e !important;
+}
+
+.input-field input[type="number"]:focus {
+  border-bottom: 1px solid #00c95e !important;
+  box-shadow: 0 1px 0 0 #00c95e !important;
+}
+
+.input-field input[type="url"]:focus {
+  border-bottom: 1px solid #00c95e !important;
+  box-shadow: 0 1px 0 0 #00c95e !important;
+}
+
+/* valid color for text,number and url types*/
+.input-field input[type="text"].valid {
+  border-bottom: 1px solid #00c95e !important;
+  box-shadow: 0 1px 0 0 #00c95e !important;
+}
+
+.input-field input[type="number"].valid {
+  border-bottom: 1px solid #00c95e !important;
+  box-shadow: 0 1px 0 0 #00c95e !important;
+}
+
+.input-field input[type="url"].valid {
+  border-bottom: 1px solid #00c95e !important;
+  box-shadow: 0 1px 0 0 #00c95e !important;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: black;
+}
+
+/* color for datepicker field */
+.datepicker-cancel,
+.datepicker-clear,
+.datepicker-today,
+.datepicker-done {
+  color: #0b0b0b;
+}
+/* color for day select in date picker */
+.is-selected {
+  background-color: #dddddd !important;
+}
+
+/* 
+    Edit Games Page 
+*/
+
+/* data picker text color */
+.datepicker-day-button {
+  color: black;
+}
+
+/* date picker background color */
+.datepicker-date-display {
+  background-color: #323232;
+}
+
+/* delete button text color and no decoration */
+#delete-button-link {
+  color: white;
+  text-decoration: none;
+  z-index: 0;
+}
+
+/* delete confirmation modal buttons position and style */
+#no-button,
+#yes-button {
+  color: black;
+  font-weight: bold;
+  margin-left: 14px;
+}
+
+/* Save button z-index for not overlapping with footer */
+#save-button {
+  z-index: 0;
+}
+
+/* delete modal confirmation box size */
+#modal1 {
+  width: 15%;
+}
+
+/* modal settings*/
+.modal .modal-footer {
+  text-align: center;
+  overflow: hidden;
+}
+
+/** margin bottom buttons **/
+
+div.row:nth-child(3) > div:nth-child(1) {
+  margin-bottom: 12rem;
+}
+
+/*
+    Login/register pages 
+*/
+
+/* size of input text */
+#box-input {
+  width: 40%;
+}
+
+/* label active position */
+.active {
+  margin-right: 15px;
+  font-size: 15px;
+}
+
+/* z-index for not overlapping with footer */
+.login-register-btn {
+  z-index: 0;
+}
+
+/* 
+    Footer Style 
+*/
+
+/* footer background and position */
 .page-footer {
-    background-color: black!important;
-    color: white;
+  background-color: black !important;
+  color: white;
 }
 
-.footer-copyright {
-    background-color: black!important;
-}
-
+/* social icons size */
 .social-icons {
-    font-size: 20px;
-    z-index: 9999999;
+  font-size: 25px;
 }
 
+/* font awesome color icons for footer */
 .fab {
-    color: #D3D3D3;
+  color: #d3d3d3;
 }
-.fas{
-    color:#D3D3D3;
+.fas {
+  color: #d3d3d3;
 }
+
+/* designed by text in footer font size */
 .designed-by {
-    font-size: 12px;
+  font-size: 15px;
+}
+
+/*******
+            Media queries
+********/
+
+/* Smartphones 320px to 640px */
+
+@media (min-width: 320px) and (max-width: 640px) {
+  /* modal size */
+  #modal1 {
+    width: 50%;
+  }
+
+  /* search btn position */
+  #search-btn {
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
+  /* login container size */
+  .login-container {
+    height: 100vh;
+  }
+
+  /* Games container page size */
+  .games-container {
+    height: 120vh;
+  }
+
+  /* Add edit pages container size */
+  .add-edit-game-container {
+    height: 140vh;
+  }
+}
+
+/* Low Resolution Tablets, Mobiles (Landscape)
+  Screen = 481px to 812px */
+
+@media (min-width: 481px) and (max-width: 912px) {
+  /* login container size */
+  .login-register {
+    height: 120vh;
+  }
+
+  /* Games container page size */
+  .games-container {
+    height: 160vh;
+  }
+
+  /* Add edit pages container size */
+  .add-edit-game-container {
+    height: 140vh;
+  }
+}
+
+/*  galaxy fold landscape*/
+
+@media (min-width: 823px) and (max-width: 850px) {
+  .login-register {
+    height: 120vh;
+  }
+
+  /* Games container page size */
+  .games-container {
+    height: 120vh;
+  }
+
+  /* Add edit pages container size */
+  .add-edit-game-container {
+    height: 140vh;
+  }
+}
+
+@media only screen and (min-device-width: 900px) and (max-device-width: 1366px) {
+  .login-register {
+    height: 120vh;
+  }
+  .games-container {
+    height: 120vh;
+  }
 }

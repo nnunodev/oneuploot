@@ -1,7 +1,10 @@
-//initialize materilize components
+// Materialize components
 
-$(document).ready(function(){
-    $('.parallax').parallax();
-    $('.sidenav').sidenav();
-  });
-        
+$(document).ready(function () {
+  $("select").formSelect();
+  $(".sidenav").sidenav();
+  $(".datepicker").datepicker();
+  $(".parallax").parallax();
+  $(".modal").modal();
+  $(".dropdown-trigger").dropdown();
+});

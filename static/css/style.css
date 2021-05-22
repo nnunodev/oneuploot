@@ -457,7 +457,7 @@ div.row:nth-child(3) > div:nth-child(1) {
 
 @media only screen and (min-device-width: 900px) and (max-device-width: 1366px) {
   .login-register {
-    height: 120vh;
+    height: 80vh;
   }
   .games-container {
     height: 120vh;
